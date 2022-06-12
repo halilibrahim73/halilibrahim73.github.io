@@ -7,7 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
-    <title>HALİL İBRAHİM DÜRMÜŞ Web Sitesi</title>
+    <title>HALİL İBRAHİM DÜRMÜŞ Web Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
@@ -33,11 +37,85 @@
         $(document).ready(function(){
           $("#flip").click(function(){
              $("#panel").slideToggle("slow");
-  });
-});
+          });
+        });
 
     </script>
     <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+/* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+/* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+
+/* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+/* The dots/bullets/indicators */
+        .dot {
+           height: 15px;
+           width: 15px;
+           margin: 0 2px;
+           background-color: #bbb;
+           border-radius: 50%;
+           display: inline-block;
+           transition: background-color 0.6s ease;
+        }
+
+        .active {
+           background-color: #717171;
+        }
+
+/* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @keyframes fade { 
+           from {opacity: .4} 
+           to {opacity: 1}
+        }
+
+/* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+        }
+
+
+        #panel, #flip {
+          padding: 5px;
+          text-align: center;
+         }
+
+        #panel {
+          padding: 50px;
+          display: none;
+         }
+
         ul {
             list-style-type: none;
         }
@@ -118,6 +196,16 @@
             color: #4A4E4D;
             background-color: #F6CD61;
         }
+
+        .progress-bar{
+            background: greenyellow;
+        }
+
+        .progress-value{
+            color: red;
+        }
+      
+        pro
     </style>
 
 
@@ -127,7 +215,7 @@
 
     <header>
 
-        <div class="collapse bg-dark" id="navbarHeader">
+        <div class="collapse bg-dark" id="panel">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
@@ -148,106 +236,227 @@
         </div>
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a href="#" class="navbar-brand d-flex align-items-center">
+                <a href="#" class="navbar-brand d-flex align-items-center ">
 
                     <strong>BENİ TAKİP ET</strong>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a id="flip">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                </a>
             </div>
         </div>
-        <ul id="yatay-menu">
+        <ul id="yatay-menu" style="position: sticky;">
             <li><a href="#">ANASAYFA</a></li>
-            <li><a href="#">HAKKIMDA</a></li>
-            <li><a href="#">PROJELERİM</a></li>
-            <li><a href="#">İLETİŞİM</a></li>
+            <li><a href="cv1924458299.pdf">HAKKIMDA</a></li>
+            <li><a href="#project">PROJELERİM</a></li>
+            <li><a href="#iletisim">İLETİŞİM</a></li>
     </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+           <div class="numbertext"></div>
+              <img src="1.png" style="width:100%">
+              <div class="text">Caption Text</div>
+        </div>
 
-    <main>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+            <img src="2.png" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
 
 
-        <h1 ıd="hakkımda">BEN KİMİM</h1>
-        <h2>
-            <ul class="special">
-                <li>İNÖNÜ ÜNİVERSİTESİ YAZILIM MÜHENDİSLİGİ ÖGRENCİSİ.</li>
-                <li>19 YAŞINDA</li>
-                <li>HAYALLERİ OLAN</li>
-                <li>SAVAŞCI</li>
-                <li>PRATİK</li>
-                <li>AHLAKLI</li>
-                <li>BİR TÜRK GENÇİYİM</li>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+              <img src="3.png" style="width:100%">
+              <div class="text">Caption Text</div>
+          </div>
 
-            </ul>
-        </h2>
-        <div class="album py-5 bg-light">
-            <div class="container">
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="4.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="aw-zoom" src="8.jpg" class="float-left" alt="Paris" width="100%" height="350">
-                            <div class="card-body">
-                                <p class="card-text">KOD YAZMAK</p>
-                                <div class="d-flex justify-content-between align-items-center">
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+            <img src="9.png" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
 
-                                </div>
+    </div>
+<br>
+
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+
+    function showSlides() {
+  
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+ 
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+   
+        slideIndex++;
+  
+        if (slideIndex > slides.length) {slideIndex = 1}    
+  
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+  
+        slides[slideIndex-1].style.display = "block";  
+  
+        dots[slideIndex-1].className += " active";
+  
+        setTimeout(showSlides, 2000);
+        }
+</script>
+
+   
+    
+<div class="container">
+     <h1>HOBİLERİM</h1>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="6.jpg" alt="YÜZMEK" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>YÜZMEK</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="5.jpg" alt="BİSİKLET SÜRMEK" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>BİSİKLET SÜRMEK</h3>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="7.jpg" alt="ARABA YARIŞLARI" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>ARABA YARIŞLARI</h3>
+        </div>
+      </div>
+      
+      <div class="item">
+        <img src="8.jpg" alt="KOD YAZMAK" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>KOD YAZMAK</h3>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+ 
+
+
+    <div id="project">
+        <h1>BECERİLERİM</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="progress-title">
+                        <h3>HTML</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 95%";>
+                                <div class="progress-value">%95</div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="aw-zoom" src="5.jpg" class="float-left" alt="Paris" width="100%" height="350">
-
-                            <div class="card-body">
-                                <p class="card-text">BİSİKLET SÜRMEK</p>
-                                <div class="d-flex justify-content-between align-items-center">
-
-                                </div>
+                    <div class="progress-title">
+                        <h3>CSS</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%";>
+                                <div class="progress-value">%85</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="aw-zoom" src="6.jpg" class="float-left" alt="Paris" width="100%" height="350">
-
-                            <div class="card-body">
-                                <p class="card-text">YÜZMEK</p>
-                                <div class="d-flex justify-content-between align-items-center">
-
-                                </div>
+                    <div class="progress-title">
+                        <h3>JS</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 60%";>
+                                <div class="progress-value">%60</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img class="aw-zoom" src="7.jpg" class="float-left" alt="Paris" width="100%" height="350">
-                            <div class="card-body">
-                                <p class="card-text">ARABA YARIŞLARI</p>
-                                <div class="d-flex justify-content-between align-items-center">
-
-                                </div>
+                    <div class="progress-title">
+                        <h3>JQUERY</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 45%";>
+                                <div class="progress-value">%45</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-title">
+                        <h3>BOOTSTRAP</h3>
+                        <div class="progress">
+                            <div class="progress-bar"style="width: 55%";>
+                                <div class="progress-value">%55</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-title">
+                        <h3>JAVA</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 30%";>
+                                <div class="progress-value">%30</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-title">
+                        <h3>C</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 100%";>
+                                <div class="progress-value">%100</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </main>
-    <div>
-        <h1>BİLDİGİM DİLLER</h1>
-
-
-        <h2></h2>
     </div>
 
     <footer class="text-muted py-5">
 
         <div class="container">
             <div class="mbr-section-head">
+                <a name="iletisim"></a>
                 <h3 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
                     <strong style="padding-bottom: 10em;">İletişim</strong>
                 </h3>
@@ -291,7 +500,7 @@
 
     </footer>
 
-    <section style="height: 100px; background-color: #232323;" class="footer3 cid-sahokunNCk" once="footers" id="footer3-8">
+    <section style="height: 100px; background-color: black;" class="footer3 cid-sahokunNCk" once="footers" id="footer3-8">
 
         <p style="color: #fff; padding-left: 14%;" class="mbr-text mb-0 mbr-fonts-style display-7">
             © Copyright HALİL İBRAHİM DÜRMÜŞ 2022 . Tüm hakları saklıdır.
@@ -301,10 +510,12 @@
 
     </section>
 
+    /*
+    jquery ve bootstrap kodlarını ve linklerini w3school dan aldım.
+    */
 
-</body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-
+</body>
 </html>
